@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Flower" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c72f96d9-38c2-435f-af49-97a4a2b29c57">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="687"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CSV.jrdax"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset" uuid="39581794-7f4c-48d6-8f6a-b421776f515c"/>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="SistemaOperativo" class="java.lang.String"/>
+	<field name="PlacaBase" class="java.lang.String"/>
+	<field name="CPU" class="java.lang.String"/>
+	<field name="TemperaturaCPU" class="java.lang.String"/>
+	<field name="MemoriaRAM" class="java.lang.String"/>
+	<field name="MemoriaRAMtotal" class="java.lang.String"/>
+	<field name="MemoriaRAMdisponible" class="java.lang.String"/>
+	<field name="MemoriaRAMEnUso" class="java.lang.String"/>
+	<field name="UsedMemory" class="java.lang.String"/>
+	<field name="AvailableMemory" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<line>
+				<reportElement x="201" y="431" width="117" height="1" uuid="9d52c925-3792-4c81-8c8c-2e363bb14c64">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="72" y="37" width="204" height="1" uuid="c312bdf6-78db-4c4b-8d2c-86c848f090c5">
+					<printWhenExpression><![CDATA[Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="166" y="440" width="186" height="160" uuid="9b306216-9596-4a89-9831-3779d70db674"/>
+				<imageExpression><![CDATA["C:/Users/Iproy/Downloads/4417114_desktop_pc_server_icon.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="336" y="65" width="217" height="29" uuid="7a8ee983-690c-4f4d-9330-42613bd3d628"/>
+				<textElement textAlignment="Right">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Joel Couto Lugo]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="0" width="597" height="65" forecolor="#006699" backcolor="#006699" uuid="29f958b3-9df5-4ee0-905e-9fd33029926f"/>
+				<staticText>
+					<reportElement style="Title" x="9" y="0" width="568" height="65" uuid="cf1fabd8-9376-4a95-a65d-c762a7404011"/>
+					<textElement textAlignment="Right">
+						<font size="54" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Proyecto DAD-PGV]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="516" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="480" width="300" height="30" uuid="e4fc631e-e2bb-4a68-afbd-c73d3673ea5b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95c45d90-c57e-46a3-8ba3-5119d60fbac3"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MemoriaRAMdisponible}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="450" width="150" height="30" uuid="fde3f206-5462-4453-bebc-526e60b8ae68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAM disponible:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="420" width="300" height="30" uuid="b9b1a2e9-3630-49bc-ba81-1b698ec8f74f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="91902c4d-d3b3-46be-a043-7c06a3ec3360"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MemoriaRAMEnUso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="390" width="150" height="30" uuid="734adac8-2355-45d5-bcc1-2ea130d3fb15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAM en uso:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="360" width="300" height="30" uuid="800e2b8c-5b3d-4a98-b0f0-2389de4d9f67">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e7c86b82-6a43-4e95-8411-707e30c8f094"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MemoriaRAMtotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="330" width="150" height="30" uuid="862f87e6-601c-46e1-b1ad-d345e116bf7b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAM total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="300" width="300" height="30" uuid="67c952bb-a5f2-434a-a945-94df89603032">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b65a4c83-bd8a-4aad-92b0-cbe986714e53"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MemoriaRAM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="270" width="150" height="30" uuid="27a9245b-49fa-44eb-af38-0d0955822e39"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad RAM:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="240" width="300" height="30" uuid="0ad1a1bf-288f-451d-976d-07595685a210">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fab633aa-32b0-4664-ad20-ca71a9305916"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TemperaturaCPU}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="210" width="150" height="30" uuid="8bdd3da3-baf4-495f-a0cf-08a0633b74e5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura CPU:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="180" width="300" height="30" uuid="82d9fce7-8189-4c8f-b7ce-87348dfb3014">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8bf41b80-041a-48d9-bfd8-375e006c5dee"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CPU}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="150" width="150" height="30" uuid="065805ba-4951-41cb-9f95-9df7a5f4a876"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Procesador (CPU):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="120" width="300" height="30" uuid="caf63338-4473-4c0b-8a34-ac4e3da39336">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="429e4886-5031-4477-9c14-d57ab26bc5a0"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PlacaBase}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="90" width="150" height="30" uuid="679e26c1-b74d-429d-847c-d297dfa2f8b9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Placa Base:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="20" width="150" height="30" uuid="754c4eaa-c0d9-492e-b5b6-3c71b1e67f0a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sistema Operativo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="50" width="300" height="30" uuid="953cf45f-c8d1-476a-a02f-71643a2e6dc1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6083fcd3-015e-4414-8897-f98943cc82f6"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SistemaOperativo}]]></textFieldExpression>
+			</textField>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="344" y="190" width="213" height="200" uuid="528b28ef-94af-44ee-a247-ebe808318be2"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA["Memoria Usada"]]></keyExpression>
+						<valueExpression><![CDATA[DOUBLE_VALUE($F{UsedMemory} )]]></valueExpression>
+						<labelExpression><![CDATA[$F{MemoriaRAMEnUso}]]></labelExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA["Memoria Disponible"]]></keyExpression>
+						<valueExpression><![CDATA[DOUBLE_VALUE($F{AvailableMemory} )]]></valueExpression>
+						<labelExpression><![CDATA[$F{MemoriaRAMdisponible}]]></labelExpression>
+					</pieSeries>
+				</pieDataset>
+				<piePlot>
+					<plot backcolor="#FFFFFF" backgroundAlpha="1.0" foregroundAlpha="1.0">
+						<seriesColor seriesOrder="0" color="#0598FF"/>
+						<seriesColor seriesOrder="1" color="#037DC3"/>
+					</plot>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="51" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="0a05d19c-77ff-48d5-91d6-460d221419e5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#006699" uuid="21b8ec89-3912-4f38-b1d2-846c348d496b"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="13" forecolor="#FFFFFF" uuid="2f1f4647-386f-4ee9-b3b1-779c70fd7960"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="13" forecolor="#FFFFFF" uuid="c50a7647-9d9b-4145-89d7-15adb353fac4"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="2a75ce15-0152-4154-9a45-a23c6a9d3107"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
