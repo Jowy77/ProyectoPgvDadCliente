@@ -1,0 +1,27 @@
+#anchorPane1{
+    -fx-background-color: #0598ff;
+}
+
+#anchorPane2{
+	
+}
+
+#emailTextField{
+	-fx-background-color: transparent;
+	-fx-border-color: #0598ff;
+	-fx-border-width: 0px 0px 2px 0px;
+}
+
+#passwordTextField{
+	-fx-background-color: transparent;
+	-fx-border-color: #0598ff;
+	-fx-border-width: 0px 0px 2px 0px;
+}
+
+#loginButton{
+	-fx-background-color: #0598ff;
+}
+
+#closeButton{
+	-fx-background-color: transparent;
+}

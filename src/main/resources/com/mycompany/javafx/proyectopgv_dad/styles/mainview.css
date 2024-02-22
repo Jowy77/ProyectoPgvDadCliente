@@ -1,0 +1,27 @@
+#serverButton{
+	-fx-background-color: transparent;
+	-fx-background-radius: 0em;
+	-fx-text-fill: white;
+}
+
+#serverButton:hover{
+	-fx-background-color: #66AADE;
+}
+
+#serverButton:pressed{
+	-fx-background-color: #037DC3;
+}
+
+#serverButton:focused {
+	-fx-background-color: #037DC3;
+	-fx-border-color: #CDD1D6;
+	-fx-border-width: 0px 0px 0px 3px;
+}
+
+.default-color0.chart-pie{
+    -fx-pie-color: #0598ff;
+}
+
+.default-color1.chart-pie{
+    -fx-pie-color: #037DC3;
+}

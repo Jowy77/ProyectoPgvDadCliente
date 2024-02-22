@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="461.0" style="-fx-background-color: #ffffff;" stylesheets="@styles/mainview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafx.proyectopgv_dad.controladores.ListaServersViewController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="322.0" prefWidth="139.0" style="-fx-background-color: #0d5e94;" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SERVER" size="60">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Button id="serverButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#volverLogin" prefHeight="38.0" prefWidth="205.0" text="VOLVER A LOG-IN" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="15.0" />
+                     </graphic>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <BorderPane BorderPane.alignment="CENTER">
+               <center>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="800.0">
+                     <children>
+                        <Button fx:id="closeButton" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="22.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <FontAwesomeIconView fill="#300beb" glyphName="CLOSE" size="15.0" />
+                           </graphic>
+                        </Button>
+                     </children></HBox>
+               </center>
+               <left>
+                  <HBox alignment="CENTER" BorderPane.alignment="CENTER_LEFT">
+                     <children>
+                        <FontAwesomeIconView fill="#0d5e94" glyphName="SERVER" selectionFill="BLACK" size="15.0" />
+                        <Label text=" SERVERS" textFill="#0d5e94">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text=" MONITOR" textFill="#0598ff">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </left>
+               <BorderPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <ListView fx:id="listView" prefHeight="322.0" prefWidth="272.0" style="-fx-border-color: #0598ff;" />
+                  <Button mnemonicParsing="false" onAction="#abrirMainView" style="-fx-background-color: #0598ff;" text="Conectar al servidor" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
